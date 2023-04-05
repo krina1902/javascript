@@ -7,20 +7,54 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- primitivedatatype total 7 -->
+    
     <script>
+        // primitivedatatype total 7
         let a=2
         let b=null
         let c=BigInt(12)
         let d=true
-        let e= Symbol()
-        let f=undefined
+        let e="krina"
+        let f= Symbol()
+        let g=undefined
         console.log(typeof a + a);
         console.log(typeof b + b);
         console.log(typeof c + c);
         console.log(typeof d + d);
-        console.log(typeof e);
-        console.log(typeof f + f);
+        console.log(typeof f);
+        console.log(typeof e + e);
+        console.log(typeof g + g);
+
+        // non premitive datatype total 2
+        const h={
+            "krina":21,
+            "krin":null,
+            "kri":BigInt(2)+BigInt(6),
+            "kr":true,
+            "k":undefined
+        }
+        console.log(typeof h);
+        console.log(h);
+        console.log(h.krina);
+        console.log(h.krin);
+        console.log(h.kri);
+        console.log(h.kr);
+        
+        const i=[1,2,3,4,null,"krina",null,true,undefined]
+        console.log(typeof i);
+        console.log(i);
+        console.log(i.length);
+        console.log(i[0]);
+        console.log(i[1]);
+        console.log(i[2]);
+        console.log(i[3]);
+        console.log(i[4]);
+        console.log(i[5]);
+        console.log(i[6]);
+        console.log(i[7]);
+        console.log(i[8]);
+
+
     </script>
 </body>
 </html>
