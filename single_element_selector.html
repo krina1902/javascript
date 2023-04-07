@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1 class="head" id="heading">SINGLE ELEMENT SELECTOR</h1>
+        <p class="head" id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident eos quia reiciendis, delectus, sit dicta temporibus vero corporis earum perferendis aspernatur ipsum voluptate ex? Necessitatibus nostrum pariatur animi quisquam?</p>
+        <p class="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident eos quia reiciendis, delectus, sit dicta temporibus vero corporis earum perferendis aspernatur ipsum voluptate ex? Necessitatibus nostrum pariatur animi quisquam?</p>
+        <p class="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident eos quia reiciendis, delectus, sit dicta temporibus vero corporis earum perferendis aspernatur ipsum voluptate ex? Necessitatibus nostrum pariatur animi quisquam?</p>
+    </section>
+    <script>
+        let element = document.getElementById("heading")
+        console.log(element);
+        let element_1 = document.querySelector("#p")
+        console.log(element_1);
+        let element_2 = document.querySelector(".head")
+        console.log(element_2);
+        let element_3 = document.querySelector("p")
+        console.log(element_3);
+
+    </script>
+</body>
+</html>
