@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let add = prompt("enter your mark")
+            add = Number.parseInt(add);
+        if (add <= 35){
+            document.write("you are not eligible");
+        }
+        else if(add > 35 && add <= 50){
+            document.write("Average");
+        }
+        else if(add > 50 && add <= 80){
+            document.write("Good");
+        }
+        else{
+            document.write("you are eligible");
+        }
+    </script>
+</body>
+</html>
