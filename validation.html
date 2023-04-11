@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .sec{
+            background-color: coral;
+            border: 2px solid black;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .form{
+            padding: 100px 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="sec">
+        <div class="form">
+            <form onsubmit="return validform()">
+                <input type="text" id="username" placeholder="enter your name"><br>
+                <p id="usererror"></p>
+                <input type="password" id="pw" placeholder="enter password"><br>
+                <p id="pwerror"></p>
+                <input type="submit" value="login"><br>
+            </form>
+        </div>
+    </section>
+    <script>
+        let username = document.getElementById("username")
+        let pw = document.getElementById("pw")
+        let usererror = document.getElementById("usererror")
+        let pwerror = document.getElementById("pwerror")
+        let count = 1
+        function validform(){
+            if(username.value == ""){
+                usererror.innerHTML = "enter password"
+                count = 0
+            }
+            else{
+                usererror.innerHTML = ""
+                count = 1
+            }
+            if(pw.value == ""){
+                pwerror.innerHTML="please enter password"
+                count = 0
+            }
+            else if(pw.value.length < 8){
+                pwerror.innerHTML="max 8 character"
+                count = 0
+            }
+            else{
+                pwerror.innerHTML=""
+                count = 1
+            }
+            if(count){
+                return true
+            }
+            else{
+            return false
+            }
+        }
+    </script>
+</body>
+</html>
