@@ -30,8 +30,18 @@
                 <p id="usererror"></p>
                 <input type="password" id="pw" placeholder="enter password"><br>
                 <p id="pwerror"></p>
+                <input type="radio" name="gender" id="gender">Male
+                <input type="radio" name="gender" id="gender1">Female
+                <p id="option"></p>
+                <input type="checkbox" class="check" name="check">HTML<br>
+                <input type="checkbox" class="check" name="check">CSS<br>
+                <input type="checkbox" class="check" name="check">JS<br>
+                <input type="checkbox" class="check" name="check">C<br>
+                <p id="option1"></p><br>
                 <input type="submit" value="login"><br>
             </form>
+        
+                
         </div>
     </section>
     <script>
@@ -39,6 +49,11 @@
         let pw = document.getElementById("pw")
         let usererror = document.getElementById("usererror")
         let pwerror = document.getElementById("pwerror")
+        let gender = document.getElementById("gender")
+        let gender1 = document.getElementById("gender1")
+        let option = document.getElementById("option")
+        let check = document.getElementsByClassName("check")
+        let option1 = document.getElementById("option1")
         let count = 1
         function validform(){
             if(username.value == ""){
@@ -60,6 +75,26 @@
             else{
                 pwerror.innerHTML=""
                 count = 1
+            }
+            if(gender.checked == true){
+                option.innerHTML = ""
+                count = 1
+            }
+            else if(gender1.checked == true){
+                option.innerHTML = ""
+                count = 1
+            }
+            else{
+                option.innerHTML = "please select one option"
+                count = 0
+            }
+            if(check.checked){
+                option1.innerHTML = ""
+                count = 1
+            }
+            else{
+                option1.innerHTML = "please select any options"
+                count = 0
             }
             if(count){
                 return true
