@@ -33,10 +33,10 @@
                 <input type="radio" name="gender" id="gender">Male
                 <input type="radio" name="gender" id="gender1">Female
                 <p id="option"></p>
-                <input type="checkbox" class="check" name="check">HTML<br>
-                <input type="checkbox" class="check" name="check">CSS<br>
-                <input type="checkbox" class="check" name="check">JS<br>
-                <input type="checkbox" class="check" name="check">C<br>
+                <input type="checkbox" class="check" name="check" value="yess">HTML<br>
+                <input type="checkbox" class="check" name="check" value="yes">CSS<br>
+                <input type="checkbox" class="check" name="check" value="ye">JS<br>
+                <input type="checkbox" class="check" name="check" value="y">C<br>
                 <p id="option1"></p><br>
                 <input type="submit" value="login"><br>
             </form>
@@ -52,12 +52,13 @@
         let gender = document.getElementById("gender")
         let gender1 = document.getElementById("gender1")
         let option = document.getElementById("option")
-        let check = document.getElementsByClassName("check")
+        let checkboxes = document.getElementsByClassName("check")
         let option1 = document.getElementById("option1")
         let count = 1
+        
         function validform(){
             if(username.value == ""){
-                usererror.innerHTML = "enter password"
+                usererror.innerHTML = "enter username"
                 count = 0
             }
             else{
@@ -88,14 +89,15 @@
                 option.innerHTML = "please select one option"
                 count = 0
             }
-            if(check.checked){
+            if(checkboxes.checked){
                 option1.innerHTML = ""
                 count = 1
             }
-            else{
+            else {
                 option1.innerHTML = "please select any options"
                 count = 0
             }
+          
             if(count){
                 return true
             }
@@ -103,6 +105,7 @@
             return false
             }
         }
+           
     </script>
 </body>
 </html>
