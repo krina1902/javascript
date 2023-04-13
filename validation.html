@@ -25,19 +25,14 @@
 <body>
     <section class="sec">
         <div class="form">
-            <form onsubmit="return validform()">
-                <input type="text" id="username" placeholder="enter your name"><br>
+            <form onsubmit="return validform() " action="web 1/petcare.html">
+                USERNAME <input type="text" id="username" placeholder="enter your name"><br>
                 <p id="usererror"></p>
-                <input type="password" id="pw" placeholder="enter password"><br>
+                PASSWORD <input type="password" id="pw" placeholder="enter password"><br>
                 <p id="pwerror"></p>
-                <input type="radio" name="gender" id="gender">Male
+                GENDER <input type="radio" name="gender" id="gender">Male
                 <input type="radio" name="gender" id="gender1">Female
                 <p id="option"></p>
-                <input type="checkbox" class="check" name="check" value="yess">HTML<br>
-                <input type="checkbox" class="check" name="check" value="yes">CSS<br>
-                <input type="checkbox" class="check" name="check" value="ye">JS<br>
-                <input type="checkbox" class="check" name="check" value="y">C<br>
-                <p id="option1"></p><br>
                 <input type="submit" value="login"><br>
             </form>
         
@@ -52,8 +47,6 @@
         let gender = document.getElementById("gender")
         let gender1 = document.getElementById("gender1")
         let option = document.getElementById("option")
-        let checkboxes = document.getElementsByClassName("check")
-        let option1 = document.getElementById("option1")
         let count = 1
         
         function validform(){
@@ -89,20 +82,12 @@
                 option.innerHTML = "please select one option"
                 count = 0
             }
-            if(checkboxes.checked){
-                option1.innerHTML = ""
-                count = 1
-            }
-            else {
-                option1.innerHTML = "please select any options"
-                count = 0
-            }
           
             if(count){
                 return true
             }
             else{
-            return false
+                return false
             }
         }
            
