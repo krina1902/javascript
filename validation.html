@@ -47,48 +47,37 @@
         let gender = document.getElementById("gender")
         let gender1 = document.getElementById("gender1")
         let option = document.getElementById("option")
-        let count = 1
         
         function validform(){
             if(username.value == ""){
                 usererror.innerHTML = "enter username"
-                count = 0
+                return false
             }
             else{
                 usererror.innerHTML = ""
-                count = 1
+            
             }
+           
             if(pw.value == ""){
                 pwerror.innerHTML="please enter password"
-                count = 0
+                return false
             }
             else if(pw.value.length < 8){
                 pwerror.innerHTML="max 8 character"
-                count = 0
+                return false
             }
             else{
                 pwerror.innerHTML=""
-                count = 1
             }
-            if(gender.checked == true){
+            if(gender.checked == true || gender1.checked == true){
                 option.innerHTML = ""
-                count = 1
-            }
-            else if(gender1.checked == true){
-                option.innerHTML = ""
-                count = 1
+            
             }
             else{
                 option.innerHTML = "please select one option"
-                count = 0
-            }
-          
-            if(count){
-                return true
-            }
-            else{
                 return false
             }
+           return true
         }
            
     </script>
