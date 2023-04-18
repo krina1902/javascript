@@ -8,13 +8,12 @@
 </head>
 <body>
     <script>
-        for (let index = 1; index <= 10; ++index) {
-            for (let k = 1; k <= index; ++k) {
-                
-            document.write("* ")
-
-            console.log("* ");
-                
+        for (let index = 1; index <= 20; index++) {
+            for (let k = 1; k <= 20 - index; k++) {
+            document.write("&nbsp; &nbsp;")
+            }
+            for (let j = 1; j <= index ; j++){
+                document.write("*&nbsp;")
             }
 
             document.write("</br>")
