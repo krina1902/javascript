@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h3 onclick="function1()" id="a">click me to change bg color</h3> 
+    <h3 onclick="function1()" id="a">click me to change bg color & innertext</h3> 
     <script> 
         let a = document.getElementById("a") 
         function function1(){
-                  a.style.backgroundColor = "yellow";
+                  a.innerHTML = "hello world"
                   a.style.color = "orange";
                   console.log(a);
         }
