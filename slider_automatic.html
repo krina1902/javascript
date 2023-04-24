@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 1400px;
+            margin: 0 auto;
+        }
+        img{
+            width: 50%;
+            height: 700px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image/pexels-efe-ersoy-16215246.jpg" alt="" class="slider">
+        <img src="image/pexels-kate-andreeshcheva-14245756.jpg" alt="" class="slider">
+        <img src="image/pexels-marta-dzedyshko-2775861.jpg" alt="" class="slider">
+        <img src="image/pexels-mike-gonzález-12329780.jpg" alt="" class="slider">
+        <img src="image/pexels-polina-kovaleva-5546810.jpg" alt="" class="slider">
+        <img src="image/pexels-taylen-lundequam-14775586.jpg" alt="" class="slider">
+
+    </div>
+    <script>
+        var sliderdata = document.getElementsByClassName("slider")
+        console.log(sliderdata);
+        counter = 0
+        function slide() {
+            for (let index = 0; index < sliderdata.length; index++) {
+                console.log(sliderdata[index]);
+                sliderdata[index].style.display = "none"
+            }
+            if (counter >= sliderdata.length) {
+                counter = 0
+            }
+            sliderdata[counter].style.display = "block"
+            counter++
+            setTimeout(slide , 2000)
+        }
+        slide()
+    </script>
+</body>
+</html>
