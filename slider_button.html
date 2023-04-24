@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 500px;
+            width: 1000px;
+            margin: 20px auto;
+            box-shadow: 0px 0px 10px gray;
+            position: relative;
+            overflow: hidden; 
+            
+        }
+        img{
+            height: 500px;
+            width: 100%;
+            position: absolute;
+            transition: 2s;
+        }
+        .nav{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image/pexels-efe-ersoy-16215246.jpg" class="a" alt="">
+        <img src="image/pexels-kate-andreeshcheva-14245756.jpg" class="a" alt="">
+        <img src="image/pexels-marta-dzedyshko-2775861.jpg" class="a" alt="">
+        <img src="image/pexels-mike-gonzález-12329780.jpg" class="a" alt="">
+        <img src="image/pexels-polina-kovaleva-5546810.jpg" class="a" alt="">
+        <img src="image/pexels-taylen-lundequam-14775586.jpg" class="a" alt="">
+    </div>
+    <div class="nav">
+        <button onclick="goprev()">
+            prev
+        </button>
+        <button onclick="gonext()">
+            next
+        </button>
+    </div>
+    <script>
+    const slide = document.querySelectorAll('.a')
+    console.log(slide);
+    count = 0
+    
+    slide.forEach(
+        (img,index) => {
+        img.style.left = `${index * 100}%`
+    }
+    )
+    
+    const slideImage = () => {
+        slide.forEach(
+        (img) => {
+            img.style.transform = `translateX(${count * 100}%)`
+        }
+        )
+       
+    }
+
+    const goprev = () => {
+        count++
+        slideImage()   
+    }
+   
+    const gonext = () => {
+        count--
+        slideImage()
+    }
+    </script>
+</body>
+</html>
