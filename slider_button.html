@@ -19,7 +19,7 @@
             height: 500px;
             width: 100%;
             position: absolute;
-            transition: 2s;
+            transition: 1s;
         }
         .nav{
             text-align: center;
@@ -46,7 +46,7 @@
     <script>
     const slide = document.querySelectorAll('.a')
     console.log(slide);
-    count = 0
+    let count = 0
     
     slide.forEach(
         (img,index) => {
@@ -60,15 +60,23 @@
             img.style.transform = `translateX(${count * 100}%)`
         }
         )
-       
     }
 
     const goprev = () => {
+        if(count >= slide.length){
+            count = 0
+        }
+        console.log(count);
         count++
         slideImage()   
     }
    
     const gonext = () => {
+        if(count <= slide.length){
+            count = 6
+        }
+        console.log(count);
+
         count--
         slideImage()
     }
