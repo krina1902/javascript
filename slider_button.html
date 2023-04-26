@@ -19,7 +19,7 @@
             height: 500px;
             width: 100%;
             position: absolute;
-            transition: 1s;
+            transition: 2s;
         }
         .nav{
             text-align: center;
@@ -63,22 +63,18 @@
     }
 
     const goprev = () => {
-        if(count >= slide.length){
+        count++
+        if(count>=slide.length){
             count = 0
         }
-        console.log(count);
-        count++
-        slideImage()   
+        slideImage() 
+        console.log(count); 
     }
    
     const gonext = () => {
-        if(count <= slide.length){
-            count = 6
-        }
-        console.log(count);
-
         count--
         slideImage()
+        console.log(count);
     }
     </script>
 </body>
