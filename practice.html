@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1 class="h1" id="h" name="q">single element selector</h1>
+    <h1 class="h1" id="h1" name="q">single element selector</h1>
     <p class="h1" id="p1" name="q">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ipsam vel, libero hic corporis in nihil? Error odio fugit, optio adipisci, quam recusandae perferendis delectus incidunt, in illum facilis libero!</p>
     <p class="h1" id="p2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ipsam vel, libero hic corporis in nihil? Error odio fugit, optio adipisci, quam recusandae perferendis delectus incidunt, in illum facilis libero!</p>
     <p class="h1" id="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ipsam vel, libero hic corporis in nihil? Error odio fugit, optio adipisci, quam recusandae perferendis delectus incidunt, in illum facilis libero!</p>
@@ -183,13 +184,20 @@
     //    console.log(a);
 
     //do while
-    let a = 10
-    do {
-        console.log(a++);
-    } while (a < 15);
-    console.log(a);
+    // let a = 10
+    // do {
+    //     console.log(a++);
+    // } while (a < 15);
+    // console.log(a);
 
-
+        $(document).ready(function(){
+            $("#h1").click(function(){
+                $(this).css("color","red")
+            })
+            $(".h1").dblclick(function(){
+                $(this).css({"background-color":"pink","font-size":"200%"})
+            })
+        })
     </script>
 </body>
 </html>
