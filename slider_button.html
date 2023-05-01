@@ -57,22 +57,25 @@
     const slideImage = () => {
         slide.forEach(
         (img) => {
-            img.style.transform = `translateX(${count * 100}%)`
+            img.style.transform = `translateX(-${count * 100}%)`
         }
         )
     }
 
     const goprev = () => {
-        count++
-        if(count>=slide.length){
-            count = 0
+        count--
+        if(count == -1){
+            count = 5
         }
         slideImage() 
         console.log(count); 
     }
    
     const gonext = () => {
-        count--
+        count++
+        if(count>=slide.length){
+            count = 0
+        }
         slideImage()
         console.log(count);
     }
